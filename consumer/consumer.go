@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	topic := "comments"
+	topic := "test"
 	brokers := []string{"localhost:29092"}
 	
 	// Connect to Kafka consumer
@@ -24,7 +24,7 @@ func main() {
 		}
 	}()
 
-	// Start consuming messages from the specified topic and partition
+	// Start consuming messages from the specified topic and partition 0 alone
 	partitionConsumer, err := consumer.ConsumePartition(topic, 0, sarama.OffsetOldest)
 	if err != nil {
 		panic(err)
