@@ -29,7 +29,7 @@ func createComment(c *fiber.Ctx)error{
 		return err
 	}
 	cmtInBytes, err := json.Marshal(cmt)
-	PushCommentToQueue("test",cmtInBytes)
+	PushCommentToQueue("comments",cmtInBytes)
 	c.JSON(&fiber.Map{
 		"success": true,
 		"message": "Comment pushed successfully",

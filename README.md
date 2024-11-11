@@ -13,7 +13,7 @@ go run conmsumer/consumer.go
 
 To hit API:
 ```
-curl --location --request POST '0.0.0.0:3000/api/v1/comments' \
+curl --location --request POST 'localhost:3000/api/v1/comments' \
 --header 'Content-Type: application/json' \
 --data-raw '{ "text":"message 1" }'
 ```
